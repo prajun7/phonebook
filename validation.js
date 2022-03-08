@@ -1,7 +1,9 @@
 const Joi = require('joi');
 
-//Register Validation
-// the data will be the req.body that we will get from the postman 
+// Register Validation
+// The data will be the req.body that we will get from the postman or from the user
+// We are validating the data which is given from the user
+
 const registerValidation = (data) =>{
     const schema = Joi.object({
         name:Joi.string()

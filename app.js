@@ -3,10 +3,10 @@ const app = express();
 const mongoose = require('mongoose');
 //const cors = require('cors');    //Need to add this cors, then only we will be able to 
                                 // fetch data from the below port in react
- const dotenv = require('dotenv');
- dotenv.config();
+const dotenv = require('dotenv');
+dotenv.config();
 
-//Importing the aith routes from the routes folder
+//Importing the signup routes from the routes folder
 const signUp = require('./routes/signUpRoute');
 // const userRoute = require('./routes/user');
 // const restaurantRoute = require('./routes/restaurant');
@@ -30,10 +30,7 @@ mongoose.connect(
 );
 
 app.get('/', (req,res) =>{
-    res.send("Hda");
-
+    res.send("Hello world");
 });
 
 app.listen(5000,() => console.log("Server running on port 5000"));
-
-//Change
