@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 
-const { signUpUser} = require ("../controller/signUpController");
+const { signUpUser } = require ("../controller/signUpController");
 
 // middlewares
 // const { auth, access } = require("../../middlewares/common/ErrorHandler");

@@ -10,6 +10,7 @@ dotenv.config();
 const signUp = require('./routes/signUpRoute');
 const logIn = require('./routes/logInRoute');
 const contact = require('./routes/contactRoute');
+const search = require('./routes/searchContactRoute');
 // const searchRoute = require('./routes/search')
 
 //Middlewares
@@ -20,9 +21,7 @@ app.use(express.json());
 app.use('/auth',signUp);
 app.use('/auth',logIn);
 app.use('/contact',contact);
-// app.use('/users',userRoute);
-// app.use('/restaurants',restaurantRoute);
-// app.use('/search',searchRoute);
+app.use('/search',search);
 
 //Database connection
 mongoose.connect(
