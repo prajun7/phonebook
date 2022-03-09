@@ -6,7 +6,7 @@ const bcrypt = require('bcryptjs');
 const { registerValidation } = require('../validation');
 
 // signUpUsers function validates the user inputs
-const signUpUsers = async (req, res) => {
+const signUpUser = async (req, res) => {
 
     // Validation login before creating user
     const {error} = registerValidation(req.body);
@@ -54,5 +54,5 @@ const signUpUsers = async (req, res) => {
 };
 
 module.exports = {
-    signUpUsers,
+    signUpUser
   };
