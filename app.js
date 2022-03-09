@@ -9,7 +9,7 @@ dotenv.config();
 //Importing the signup routes from the routes folder
 const signUp = require('./routes/signUpRoute');
 const logIn = require('./routes/logInRoute');
-// const restaurantRoute = require('./routes/restaurant');
+const contact = require('./routes/contactRoute');
 // const searchRoute = require('./routes/search')
 
 //Middlewares
@@ -19,6 +19,7 @@ app.use(express.json());
 //Route Middlewares
 app.use('/auth',signUp);
 app.use('/auth',logIn);
+app.use('/contact',contact);
 // app.use('/users',userRoute);
 // app.use('/restaurants',restaurantRoute);
 // app.use('/search',searchRoute);

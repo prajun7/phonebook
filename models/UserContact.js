@@ -4,14 +4,14 @@ const mongoose = require('mongoose');
 // Since User's friend is a ever growing list, se we are creating a new Collection
 // We will put the user_is from User.js for showing the relation
 
-const userFriendSchema = new mongoose.Schema({
+const userContactSchema = new mongoose.Schema({
     user_id : {
         type : mongoose.Schema.Types.ObjectId,
         ref : "User"    //It is representing to the user's model, it must be same name that is user
     },
     name:{
         type: String,
-        required: true,
+        required: true
     },
     profession:{
         type: String,
@@ -22,7 +22,7 @@ const userFriendSchema = new mongoose.Schema({
     },
     mobile:{
         type: String,
-        required: true,
+        required: true
     },
     linkedin:{
         type:String
@@ -37,10 +37,10 @@ const userFriendSchema = new mongoose.Schema({
         type: String
     },
     institution:{
-        type: String,
+        type: String
     },
     canConnectWithMe:{
-        type: Boolean
+        type: String
     },
     politics:{
         type: String
@@ -61,8 +61,7 @@ const userFriendSchema = new mongoose.Schema({
         type: String
     },
     network:{
-        type: Number,
-        required: true
+        type: Number
     },
     bloodGroup:{
         type: String
@@ -71,4 +70,38 @@ const userFriendSchema = new mongoose.Schema({
         type: String
     }
 
-})
+});
+
+module.exports = mongoose.model("UserContact",userContactSchema);
+
+
+/*
+
+For POST req, to add Contact
+
+{
+	"user_id" : "6227d4141319418e56b55644",
+	"name" : "Samrat",
+    "profession": "Teacher",
+    "finance": "Good",
+    "mobile": "205-999-9999",
+    "linkedin": "samrat_linkedin",
+    "canHelpMeAt": "Yes he is helpful",
+    "facebook": "Samrat",
+    "location": "Birmingham",
+    "institution": "SNS",
+    "canConnectWithMe": "Yes he can",
+    "politics": "No politics",
+    "influence": "Yes he is",
+    "domainExpert": "Nutritionist",
+    "business": "Gym",
+    "skillset": ["Gym","Coding"],
+    "dateOfBirth": "April 1",
+    "network": "5",
+    "bloodGroup": "Positive",
+    "industry": "School"
+}
+
+
+
+*/
