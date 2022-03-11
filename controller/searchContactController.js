@@ -1,6 +1,5 @@
 const UserContact = require('../models/UserContact');
 
-
 /*
 If no any query parameter is passed and if in the body only currect logged in user id is passed then,
 it displays all the user's contact information
