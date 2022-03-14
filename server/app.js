@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 const mongoose = require('mongoose');
-//const cors = require('cors');    //Need to add this cors, then only we will be able to 
+const cors = require('cors');    //Need to add this cors, then only we will be able to 
                                 // fetch data from the below port in react
 const dotenv = require('dotenv');
 dotenv.config();
@@ -15,7 +15,7 @@ const search = require('./routes/searchContactRoute');
 
 //Middlewares
 app.use(express.json());
-// app.use(cors());
+app.use(cors());
 
 //Route Middlewares
 app.use('/auth',signUp);
