@@ -1,6 +1,8 @@
 import './App.css';
 import SignUp from './components/pages/signUp/SignUp'
 import Home from './components/pages/home/Home'
+import ForgotPassword from './components/pages/forgotPassword/forgotPassword';
+import LogIn from './components/pages/logIn/LogIn';
 
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'; 
 
@@ -15,8 +17,9 @@ function App() {
         <UserContextProvider>
           <Switch>
             <Route path = "/" exact component ={Home} />
+            <Route path = "/login" component = {LogIn} />
             <Route path = "/signup" component = {SignUp} />
-            
+            <Route path = "/forgotpassword" component = {ForgotPassword} />
           </Switch>
         </UserContextProvider>
       </Router>
