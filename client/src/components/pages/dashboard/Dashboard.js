@@ -1,10 +1,21 @@
 import React, {useState, useContext, useEffect} from 'react'
 import { UserContext } from '../../../contexts/UserContext';
+import { Link } from "react-router-dom";
 
 // This will be the Dashboard Page,
 // User will be able to see the the number of their contacts
 
 const API_BASE = "http://localhost:5000";
+
+  /*
+    This removes the underline and makes the text blue from the links
+    Used below in Forgot Password? and Need an Account?
+  */
+    const navStyle ={
+        color : 'blue',
+        textDecoration : 'none'   // Removing the text-decoration(underline) from the links
+        // In Javascript while writing CSS we need to change text-decoration to textDecoration
+    };
 
 function Dashboard() {
 
@@ -77,6 +88,12 @@ function Dashboard() {
         <div>Politicians : {politicianCount}</div>
         <div>Students : {studentCount}</div>
         <div>Businessmen : {businessmanCount}</div>
+
+        <div>
+        <Link style = {navStyle} to = "/userentry">
+           Add Contacts 
+        </Link>
+      </div>
 
     </>
   )

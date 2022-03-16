@@ -21,8 +21,7 @@ const userContactSchema = new mongoose.Schema({
         type: String
     },
     mobile:{
-        type: String,
-        required: true
+        type: String
     },
     linkedin:{
         type:String
