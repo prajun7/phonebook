@@ -84,10 +84,11 @@ const handleSubmitSignUp = async (e) => {
 
       // Using ContextAPI to store the user info that is just signed up,
       setLoggedIn(true);                  // Setting true for user is logged in
-      setUser(data.user_info_backend);    // Setting the user information
+      setUser(data.user);    // Setting the user information
+      
 
       // Must use return here, to prevent memory leakage
-      return history.push('/');
+      return history.push('/dashboard');
       // After sucessfully logged in, go to home page
     }
 

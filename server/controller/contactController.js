@@ -37,7 +37,7 @@ Counts the total number of contacts who are teachers for a specific user
 */
 const getTeacherCount = async (req,res) => {
     const documentCount = await UserContact.countDocuments({ user_id : req.params.user_id , profession : "Teacher"});
-    res.send({'Teacher Count' : documentCount});   
+    res.send({'Teacher_Count' : documentCount});   
 }
 
 /*
@@ -45,14 +45,14 @@ Counts the total number of contacts who are doctors for a specific user
 */
 const getDoctorCount = async (req,res) => {
     const documentCount = await UserContact.countDocuments({ user_id : req.params.user_id , profession : "Doctor"});
-    res.send({'Doctor Count' : documentCount});   
+    res.send({'Doctor_Count' : documentCount});   
 }
 /*
 Counts the total number of contacts who are designers for a specific user
 */
 const getDesignerCount = async (req,res) => {
     const documentCount = await UserContact.countDocuments({ user_id : req.params.user_id , profession : "Designer"});
-    res.send({'Designer Count' : documentCount});   
+    res.send({'Designer_Count' : documentCount});   
 }
 
 /*
@@ -60,7 +60,7 @@ Counts the total number of contacts who are politicians for a specific user
 */
 const getPoliticianCount = async (req,res) => {
     const documentCount = await UserContact.countDocuments({ user_id : req.params.user_id , profession : "Politician"});
-    res.send({'Politician Count' : documentCount});   
+    res.send({'Politician_Count' : documentCount});   
 }
 
 /*
@@ -68,7 +68,7 @@ Counts the total number of contacts who are students for a specific user
 */
 const getStudentCount = async (req,res) => {
     const documentCount = await UserContact.countDocuments({ user_id : req.params.user_id , profession : "Student"});
-    res.send({'Student Count' : documentCount});   
+    res.send({'Student_Count' : documentCount});   
 }
 
 /*
@@ -76,7 +76,7 @@ Counts the total number of contacts who are businessman for a specific user
 */
 const getBusinessmanCount = async (req,res) => {
     const documentCount = await UserContact.countDocuments({ user_id : req.params.user_id , profession : "Businessman"});
-    res.send({'Businessman Count' : documentCount});   
+    res.send({'Businessman_Count' : documentCount});   
 }
 
 /*

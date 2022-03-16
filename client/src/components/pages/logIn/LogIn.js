@@ -74,15 +74,15 @@ function LogIn() {
                       // so, to set userID we can do, data.user here similar to data.error
         setError(null);  //need to set this to null so, that both error and success message
                          //  won't show up together
-        
       // console.log(data.user_info_backend); // This will give us the user info that we creatd in backend
 
       // Using ComtextAPI to store the user info that is just signed up,
       setLoggedIn(true);   //Setting true for user is logged in
-      setUser(data.user_info_backend);   //Setting the user information
+      setUser(data.user);   //Setting the user information
+      console.log(data.user._id);
 
       // Must use return here, to prevent memory leakage
-        return history.push("/");   
+        return history.push("/dashboard");   
       }
       
     }catch(err){   //This is to handle network/connection errors
