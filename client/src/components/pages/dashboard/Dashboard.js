@@ -81,6 +81,12 @@ function Dashboard() {
 
   return (
     <>
+        <h1> 
+        <Link to='/' >
+              PHONEBOOK
+          </Link> 
+        </h1>
+        
         <div>Dashboard</div>
         <div>Teachers : {teacherCount}</div>
         <div>Doctors : {doctorCount}</div>

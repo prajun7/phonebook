@@ -93,6 +93,16 @@ function LogIn() {
 
   return (
     <div>   {/* Start of the main div */}
+
+      <h1> 
+        <Link to='/' >
+              PHONEBOOK
+          </Link> 
+      </h1>
+
+
+
+
     { error && <div className = 'error-message'>{error}</div>}
     {/* { successMessage && <div className = "success-message">{successMessage}</div> } */}
         {/* Only load this if error or successMessage is present */}
