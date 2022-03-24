@@ -5,8 +5,6 @@ import { UserContext } from '../../../contexts/UserContext';
 // This will be the Home Page,
 // User will be able to SigUp and LogIn from this page, if they don't have an account
 
-
-
 function Home() {
 
     // Getting user info from the context
@@ -29,6 +27,7 @@ function Home() {
 
       
         {loggedIn?
+      //True
         <ul>
            <li>
            <Link
@@ -41,10 +40,9 @@ function Home() {
               </li>
           </ul>
 
-
-
         :
-
+        
+        //False
       <ul>
         <li>
           <Link
@@ -60,13 +58,7 @@ function Home() {
           </Link>
         </li>
       </ul>
-        
-      
       }
-
-
-
-
   </div>
   );
 }
