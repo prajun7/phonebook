@@ -92,13 +92,14 @@ function LogIn() {
   }
 
   return (
-    <div>   {/* Start of the main div */}
+    <div className='main'>   {/* Start of the main div */}
+    <div className='sub-main'>   
 
-      <h1> 
+      {/* <h1> 
         <Link to='/' >
               PHONEBOOK
           </Link> 
-      </h1>
+      </h1> */}
 
 
 
@@ -134,18 +135,26 @@ function LogIn() {
                 </Link>
             </div>
           </form>
-
-      </div>  {/* end of div className= login */}
-
-      {/* ** Need an Account? SignUp  ** */}
-      <div className='need-account-text'>
+          {/* ** Need an Account? SignUp  ** */}
+          <div className='need-account-text'>
         Need an Account?  
         <Link style = {navStyle} to = "/signup">
             SignUp
         </Link>
       </div>
 
-   </div>   //End of the main div
+      </div>  {/* end of div className= login */}
+
+      {/* ** Need an Account? SignUp  ** */}
+      {/* <div className='need-account-text'>
+        Need an Account?  
+        <Link style = {navStyle} to = "/signup">
+            SignUp
+        </Link>
+      </div> */}
+
+   </div> 
+   </div>  //End of the main div
   );
 }
 
