@@ -1,5 +1,6 @@
 import React, {useState, useContext} from 'react';
 import { UserContext } from '../../../contexts/UserContext';
+import { Link } from "react-router-dom";
 
 const API_BASE = "http://localhost:5000";
 
@@ -65,6 +66,12 @@ function UserEntry() {
 
   return (
       <>
+      <h1> 
+        <Link to='/' >
+              PHONEBOOK
+          </Link> 
+      </h1>
+
     <div className = 'content'>
             <h3>UserEntry</h3>
     
@@ -158,11 +165,6 @@ function UserEntry() {
               
               <button onClick = {addContact}> Save </button>
            </div>
-
-
-
-
-
     </>
   )
 }
