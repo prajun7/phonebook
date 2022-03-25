@@ -122,7 +122,7 @@ function LogIn() {
                 type="email"
                 placeholder="Enter email"
                 required
-                className="name"
+                className="input"
                 onChange={(e) => setEmail(e.target.value)}
               />
             </div>
@@ -133,13 +133,13 @@ function LogIn() {
                 type="password"
                 placeholder="Enter Password"
                 required
-                className="name"
+                className="input"
                 onChange={(e) => setPassword(e.target.value)}
               />
             </div>
 
             <div className="login-button">
-              <button onClick={handleSubmitLogIn}> Log In </button>
+              <button onClick={handleSubmitLogIn} className="button1"> Log In </button>
             </div>
 
             {/* ** Forgot Password? ** */}

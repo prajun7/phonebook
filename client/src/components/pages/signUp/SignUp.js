@@ -140,7 +140,7 @@ function SignUp() {
                   type="text"
                   placeholder="Enter Name"
                   required
-                  className="name"
+                  className="input"
                   onChange={(e) => setName(e.target.value)}
                 />
                 </div>
@@ -152,7 +152,7 @@ function SignUp() {
                   type="email"
                   placeholder="Enter email"
                   required
-                  className="name"
+                  className="input"
                   onChange={(e) => setEmail(e.target.value)}
                 />
                 </div>
@@ -164,13 +164,13 @@ function SignUp() {
                   type="password"
                   placeholder="Enter Password"
                   required
-                  className="name"
+                  className="input"
                   onChange={(e) => setPassword(e.target.value)}
                 />
                 </div>
                 
                 <div className="login-button">
-                <button disabled={loading} onClick={handleSubmitSignUp}>
+                <button disabled={loading} onClick={handleSubmitSignUp} className="button1">
                   Sign Up
                 </button>
                 </div>
