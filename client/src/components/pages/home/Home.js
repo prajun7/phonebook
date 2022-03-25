@@ -8,7 +8,7 @@ import { UserContext } from '../../../contexts/UserContext';
 function Home() {
 
     // Getting user info from the context
-    const {loggedIn, setLoggedIn, setUser,} = useContext(UserContext);
+    const {loggedIn, setLoggedIn, setUser} = useContext(UserContext);
 
   // Calling this function, to logout the user
   // To logout the user we are setting LoggedIn to false and clearing the User data to null
