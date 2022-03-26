@@ -1,0 +1,112 @@
+.main{
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    padding: 90px 0 90px 0;
+    background-color: rgb(252, 252, 252);
+}
+
+.sub-main1{
+    display: flex;
+    justify-content: center;
+    height: 550px;
+    width:80%;
+    box-shadow: 12px 12px 13px 12px rgb(207, 207, 207);
+    padding-top: 30px;
+    border-radius: 60px;
+    background-color: white;
+}
+
+form {
+    /* Center the form on the page */
+    margin: auto;
+    width: 850px;
+    /* Form outline */
+    
+    padding: 1em;
+    border: 1px solid #CCC;
+    border-radius: 20px;
+    text-align: center;
+    justify-content: center;
+    font-size: large;
+   
+    
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  form li + li {
+    margin-top: 1em;
+  }
+  
+  label {
+    /* Uniform size & alignment */
+    display: inline-block;
+    width: 110px;
+    text-align: right;
+  }
+  
+  input,
+  textarea {
+    /* To make sure that all text fields have the same font settings
+       By default, textareas have a monospace font */
+    font: 1em sans-serif;
+  
+    /* Uniform text field size */
+    width: 300px;
+    box-sizing: border-box;
+  
+    /* Match form field borders */
+    border: 1px solid #999;
+  }
+  
+  input:focus,
+  textarea:focus {
+    /* Additional highlight for focused elements */
+    border-color: #000;
+  }
+  
+  textarea {
+    /* Align multiline text fields with their labels */
+    vertical-align: top;
+  
+    /* Provide space to type some text */
+    height: 5em;
+  }
+  
+  .button {
+    /* Align buttons with the text fields */
+    padding-left: 90px; /* same size as the label elements */
+  }
+  
+  button {
+    /* This extra margin represent roughly the same space as the space
+       between the labels and their text fields */
+    margin-left: .5em;
+  }
+
+  .input1{
+    width: 300px;
+    height: 30px;
+    border-radius: 60px;
+    box-shadow: inset 0px 0px 25px 0px #888;
+    border: none;
+    outline: none;
+    background-color: #fff;
+    padding-left: 70px;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.button1{
+    width: 380px;
+    height: 50px;
+    border-radius: 60px;
+    background-color: #b103fc;
+    color: white;
+    font-size: 25px;
+    border: none;
+}
