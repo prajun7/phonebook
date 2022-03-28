@@ -5,6 +5,7 @@ import ForgotPassword from './components/pages/forgotPassword/forgotPassword';
 import LogIn from './components/pages/logIn/LogIn';
 import Dashboard from './components/pages/dashboard/Dashboard';
 import UserEntry from './components/pages/userEntry/UserEntry';
+import SearchContact from './components/pages/searchContact/SearchContact';
 
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'; 
 
@@ -25,6 +26,7 @@ function App() {
             <Route path = "/signup" component = {SignUp} />
             <Route path = "/forgotpassword" component = {ForgotPassword} />
             <Route path = "/userentry" component={UserEntry} />
+            <Route path = "/searchcontact" component={SearchContact} />
           </Switch>
         </UserContextProvider>
       </Router>

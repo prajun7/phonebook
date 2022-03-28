@@ -10,7 +10,7 @@ const { searchUser } = require ("../controller/searchContactController");
 
 
 //Register route
-//This will go to, serach/ 
+//This will go to, search/ 
 router.post("/", searchUser );
 
 module.exports = router;

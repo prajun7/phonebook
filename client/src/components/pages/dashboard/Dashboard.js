@@ -101,6 +101,12 @@ function Dashboard() {
         </Link>
       </div>
 
+      <div >
+          <Link to="/searchcontact">
+          Search Contact
+          </Link>
+      </div>
+
     </>
   )
 }

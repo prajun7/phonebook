@@ -7,8 +7,7 @@ const API_BASE = "http://localhost:5000";
 
 function UserEntry() {
 
-    const {user } = useContext(UserContext);
-    
+    const { user } = useContext(UserContext);
 
     const[userName, setUserName] = useState("");
     const[userProfession, setUserProfession] = useState("");
@@ -68,70 +67,54 @@ function UserEntry() {
 
   return (
       <>
-      {/* <h1> 
-        <Link to='/' >
-              PHONEBOOK
-          </Link> 
-      </h1> */}
-
-    <div className = 'main'>
-          <div>
-          <h1> 
+      <h1> 
         <Link to='/' >
               PHONEBOOK
           </Link> 
       </h1>
-            <h1>NewContact</h1>
-              <form>
-            
-              <label>Name</label>
+
+    <div className = 'content'>
+            <h3>UserEntry</h3>
+    
+              <label>Name </label>
               <input 
                     type ="text" 
-                    className='input1'
                     onChange = {e => setUserName(e.target.value)}
                     value = {userName}/>
-              
-              
 
-              <label>Location</label>  
+              <label>Profession</label>  
               <input 
                     type ="text" 
-                    className='input1'
                     onChange = {e => setUserLocation(e.target.value)}
                     value = {userLocation}/>
 
-              <label>Profession</label>
+              <label>User Location</label>
               <input 
                     type ="text" 
-                    className='input1'
                     onChange = {e => setUserProfession(e.target.value)}
                     value = {userProfession}/>
 
               <label>Business</label>
               <input 
                     type ="text" 
-                    className='input1'
                     onChange = {e => setUserBusiness(e.target.value)}
                     value = {userBusiness}/>
 
               <label>Finance</label>
               <input 
-                    type ="text"
-                    className='input1'
+                    type ="text" 
                     onChange = {e => setUserFinance(e.target.value)}
                     value = {userFinance}/>
 
               <label>Institution</label>
               <input 
-                    type ="text"
-                    className='input1' 
+                    type ="text" 
                     onChange = {e => setUserInstitution(e.target.value)}
                     value = {userInstitution}/>
 
               <label>Skillset</label>
               <input 
-                    type ="text"
-                    className='input1' 
+                    type ="text" 
                     onChange = {e => setUserSkillset(e.target.value)}
                     value = {userSkillset}/>
 
@@ -140,58 +123,55 @@ function UserEntry() {
                     type ="tel" 
                     pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
                     placeholder="999-999-9999"
-                    className='input1'
                     onChange = {e => setUserMobile(e.target.value)}
                     value = {userMobile}/>
 
-              <label>BirthDay</label>
+              <label>Date of Birth</label>
               <input 
-                    type ="date"
-                    className='input1' 
+                    type ="date" 
                     onChange = {e => setUserDateOfBirth(e.target.value)}
                     value = {userDateOfBirth}/>
 
               <label>LinkedIn</label>
               <input 
-                    type ="text"
-                    className='input1' 
+                    type ="text" 
                     onChange = {e => setUserLinkedIn(e.target.value)}
                     value = {userLinkedIn}/>
 
-              <label>BloodGroup</label>
+              <label>Blood Group</label>
               <input 
-                    type ="text"
-                    className='input1' 
+                    type ="text" 
                     onChange = {e => setUserBloodGroup(e.target.value)}
                     value = {userBloodGroup}/>
 
               <label>Facebook</label>
               <input 
-                    type ="text"
-                    className='input1' 
+                    type ="text" 
                     onChange = {e => setUserFacebook(e.target.value)}
                     value = {userFacebook}/>
 
-              <label>CanHelpMeAt</label>
+              <label>Can Help Me At</label>
               <input 
                     type ="text" 
-                    className='input1'
                     onChange = {e => setUserCanHelpMeAt(e.target.value)}
                     value = {userCanHelpMeAt}/>
 
 
               <label>Politics</label>
               <input 
-                    type ="text"
-                    className='input1' 
+                    type ="text" 
                     onChange = {e => setUserPolitics(e.target.value)}
                     value = {userPolitics}/>
 
-
-              </form>
-              <button onClick = {addContact} className="button1"> Save </button>
-              </div> 
+              
+              <button onClick = {addContact}> Save </button>
            </div>
+
+            <div >
+                  <Link to="/searchcontact">
+                  Search Contact
+                  </Link>
+            </div>
     </>
   )
 }

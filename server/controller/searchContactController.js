@@ -1,7 +1,7 @@
 const UserContact = require('../models/UserContact');
 
 /*
-If no any query parameter is passed and if in the body only currect logged in user id is passed then,
+If no any query parameter is passed and if in the body only current logged in user id is passed then,
 it displays all the user's contact information
 
 If query parameter is passed, then it gives the specific user's contact information
@@ -29,14 +29,10 @@ const searchUser = async(req,res) => {
         //(!restaurant) will work for findOne beacuse, findOne returns null
 
         if(!contact.length){
-            return res.send({"message" : "Please check the contact's name"});
+            return res.send({"message" : "Please check the contact's name Or leave the search box empty and hit search"});
         }
 
-
-
-
-
-        res.send({ 'Contact' : contact });  
+        res.send({ 'message' : contact });  
 
     }catch(err){
         res.send({error : err});
