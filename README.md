@@ -6,3 +6,4 @@ Thought process: https://docs.google.com/document/d/1X-EGk4uj8Q-9riyonlE5ZNR__7g
 
 Still improving: https://www.imminect.com/
 
+
