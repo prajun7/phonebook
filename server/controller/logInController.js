@@ -1,6 +1,7 @@
 const User = require('../models/User');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
+const config = require('../config');
 
 // Getting the validation logic
 // Object destruction
@@ -29,7 +30,7 @@ const logInUser = async (req, res) => {
         }
     
         //Creating and assigning a token(JWT)
-        const token = jwt.sign({_id : user._id}, process.env.TOKEN_SECRET);
+        const token = jwt.sign({_id : user._id}, config.TOKEN_SECRET.login);
     
         res.header('authToken',token).send({'authToken' : token, 'user' : user});
         // Sending the authToken as well as all the user information 

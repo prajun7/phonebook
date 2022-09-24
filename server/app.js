@@ -7,7 +7,6 @@ const dotenv = require('dotenv');
 const config = require('./config');
 dotenv.config();
 
-
 //Importing the signup routes from the routes folder
 const signUp = require('./routes/signUpRoute');
 const logIn = require('./routes/logInRoute');
@@ -24,8 +23,6 @@ app.use('/auth',signUp);
 app.use('/auth',logIn);
 app.use('/contact',contact);
 app.use('/search',search);
-
-console.log(config.DB_CONNECTION.phoneBook);
 
 //Database connection 
 mongoose.connect(
