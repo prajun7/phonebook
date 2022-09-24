@@ -4,7 +4,9 @@ const mongoose = require('mongoose');
 const cors = require('cors');    //Need to add this cors, then only we will be able to 
                                 // fetch data from the below port in react
 const dotenv = require('dotenv');
+const config = require('./config');
 dotenv.config();
+
 
 //Importing the signup routes from the routes folder
 const signUp = require('./routes/signUpRoute');
@@ -23,9 +25,12 @@ app.use('/auth',logIn);
 app.use('/contact',contact);
 app.use('/search',search);
 
-//Database connection
+console.log(config.DB_CONNECTION.phoneBook);
+
+//Database connection 
 mongoose.connect(
-    process.env.DB_CONNECTION,
+   // process.env.DB_CONNECTION,   Example of using .env file
+   config.DB_CONNECTION.phoneBook,
     {useNewUrlParser : true},
     () => console.log("Connected to DB!")
 );
